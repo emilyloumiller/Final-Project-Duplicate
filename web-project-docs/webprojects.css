@@ -1,0 +1,164 @@
+body {
+  width:100vw;
+  margin:0;padding:0;
+}
+
+::-webkit-scrollbar { display:none; }
+
+#totop {
+  height:auto;
+  width: -moz-min-content;    /* Firefox */
+  width: -webkit-min-content; /* Chrome */
+  width: min-content;
+  position:fixed;
+  top:1000px;
+  right:0;
+  background-color:white;
+  color:black;
+  z-index:100;
+  font-family:'Inconsolata';
+  font-size:2em;
+}
+
+#page-2-wrapper {
+  position:relative;
+  width:100vw;
+  height:100vh;
+  background-color:#3e26a6;
+}
+
+#panel-1 {
+  height:100vh;
+  width:100vw;
+  position:absolute;
+  display:inline-flex;
+  background-image:url('../svg/btnline-v2.svg');
+  background-size:90px;
+  background-position:right;
+  background-repeat:no-repeat;
+}
+
+#myname {
+  width:95%;
+  height:100%;
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+#myname>h1, #myname>h2 {
+  font-family:'Inconsolata';
+  color:white;
+  z-index:100;
+}
+
+#web-projects-wrapper {
+  position:relative;
+  display:grid;
+  grid-template-rows: repeat(5,100vh);
+  height:100%;
+  width:100vw;
+  overflow-y:scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.web-project {
+  width:100vw;
+  height:100vh;
+  scroll-snap-align: start;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+
+.web-project:nth-child(1){
+  width:70vw;
+  height:100vh;
+  display:grid!important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5vw;
+}
+
+.display {
+  display:flex!important;
+}
+
+#collage {
+  margin: 2.5vw;
+}
+
+.collage-item {
+  width:80%;
+  height:auto;
+  font-family:'Inconsolata';
+}
+
+.web-project-bubble {
+  z-index:1;
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left:15px;
+  padding-top:15px;
+  transition:1s;
+}
+
+.web-project-hover {
+  transform:translateY(2vh);
+}
+
+.web-project-preview {
+  width:100%;
+  height:200px;
+  background-color:white;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+.web-project-description {
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
+  background-color:white;
+  color:black;
+  font-size:1em;
+  margin:0 auto;
+}
+
+.web-project-title {
+  font-size:1.5em;
+  font-weight:1000;
+  margin:0 auto;
+  text-align:center;
+}
+
+.item-num {
+  position:absolute;
+  z-index:2;
+  width:1.5em;
+  height:2em;
+  color:white;
+  background-color:#171717;
+  border:none;
+  font-size:2em;
+  transition:2s;
+}
+
+.item-num-hover {
+  transform:scale(1.1);
+}
+
+#css-cigarette-box-container, #canvas-record-container, #ispy-container, #webgl-container, #bitchdeck, #baked-deck {
+  width:100%;
+  height:100%;
+}

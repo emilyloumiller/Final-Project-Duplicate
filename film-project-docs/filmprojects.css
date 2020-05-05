@@ -1,0 +1,215 @@
+body {
+  width:100vw;
+  margin:0;padding:0;
+}
+
+::-webkit-scrollbar { display:none; }
+
+#page-1-wrapper {
+  position:relative;
+  width:100vw;
+  height:100vh;
+  z-index:0;
+  background-color:#3e26a6;
+  overflow-x:hidden;
+}
+
+#panel-1 {
+  height:100vh;
+  width:100vw;
+  position:absolute;
+  display:inline-flex;
+  background-image:url('../svg/btnline-v2.svg');
+  background-size:90px;
+  background-position:left;
+  background-repeat:no-repeat;
+  padding-left:5vw;
+  z-index:1;
+}
+
+#myname {
+  z-index:400;
+  width:50%;
+  height:100%;
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+#stopdrag {
+  z-index:400;
+  width:40%;
+  height:100%;
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+#panel-2 {
+  position:absolute;
+  left:0px;
+  width:150vw;
+  height:100vh;
+  z-index:3;
+}
+
+#gallery-wrapper {
+  position: relative;
+  width: 215vw;
+  height: 100vh;
+  color: white;
+  z-index:2;
+}
+
+.gallery-cell {
+  position: absolute;
+  height:100%;
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  background-color:white;
+  transition:1s;
+  overflow-y:scroll!important;
+}
+
+.gallery-cell-content {
+  width:30vw;
+  height:100%;
+}
+
+.border-left {
+  border-left:1px solid white;
+  z-index:5 !important;
+}
+
+.still {
+  z-index:2;
+  width:100%;
+  height:100vh;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transition:2.5s;
+}
+
+.still-focus {
+  height:40vh !important;
+}
+
+.bts-opacity {
+  opacity:0!important;
+}
+
+.proj-info {
+  width:90%;
+  height:40vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  z-index:2;
+  transition: 1s ease-in;
+}
+
+.bts-wrapper {
+  z-index:1;
+  position:relative;
+  width:100%;
+  height:50vh;
+  transition:2s linear;
+  border-bottom:1px solid white;
+}
+
+.bts-img {
+  z-index:2;
+  position:absolute;
+  display:inline-block;
+  width:inherit;
+  height:inherit;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.bts-caption {
+  z-index:3;
+  position:absolute;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  width:inherit;
+  height:inherit;
+  background-color:#171717;
+  color:white;
+  mix-blend-mode: hard-light;
+  transition:.5s linear;
+}
+
+#myname>h1, #myname>h2, #stopdrag>h2 {
+  font-family:'Inconsolata';
+  color:white;
+}
+
+.gallery-cell-content .proj-info {
+  color:#171717 !important;
+  font-family:'Inconsolata';
+  padding:20px;
+}
+
+.proj-info .title {
+  display:block;
+  width:fit-content;width:-webkit-fit-content;width:-moz-fit-content;
+  padding-left:5px;padding-right:5px;
+  background-color:#171717;
+  color:white;
+  font-size:2em;
+  margin:0;
+}
+
+.proj-info .description {
+  font-size:1em;
+}
+
+.proj-info .tags {
+  font-size:1em;
+  font-style:italic;
+  list-style:none!important;
+  border:1px solid #3e26a6;
+  color: #3e26a6;
+  padding-right:5px;
+  padding-left:5px;
+  margin-right:5px;
+  margin-top:5px;
+  width:fit-content;width:-webkit-fit-content;width:-moz-fit-content;
+  max-width:40%;
+}
+
+.proj-info .honors {
+  font-size:1.5em;
+  font-weight:800;
+}
+
+.honors>li {
+  list-style:none!important;
+  font-size:.7em!important;
+  font-weight:200;
+  font-style:italic;
+  color:#3e26a6;
+  border-left:1px solid #3e26a6;
+  padding-left:20px;
+  margin-top:10px;
+  line-height:90%;
+}
+
+.bts-caption>p {
+  font-family:'Inconsolata';
+  font-size:1.5em;
+  font-style:italic;
+  padding:20px;
+}
+
+.hover {
+  cursor:grab;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+  <link rel="stylesheet" href="jquery-lib/jquery-ui.css">
+  <script src="jquery-lib/jquery.js"></script>
+  <script src="jquery-lib/jquery-1.12.4.js"></script>
+  <script src="jquery-lib/jquery-ui.js"></script>
+  <script src="jquery-lib/jquery-ui-draggable.js"></script>
+</head>
+
+<style>
+.span-hover {
+  background-color:#171717;
+  transition:.6s;
+}
+
+.film-hover {
+  cursor:w-resize;
+}
+
+.web-hover {
+  cursor:e-resize;
+}
+
+</style>
+
+<body>
+<div id="page-1-wrapper">
+
+      <div id="panel-1">
+        <div id="myname">
+          <h1>Emily Miller</h1>
+          <h2><span id="film">Film Producer</span> &<br>
+          <span id="web">Web Designer</span></h2>
+        </div>
+      </div>
+
+      <div id="secret"></div>
+
+
+<script type="text/javascript">
+  film = document.getElementById("film");
+  web = document.getElementById("web");
+
+  film.addEventListener("mouseover", function() {
+    this.classList.add("span-hover");
+    this.classList.add("film-hover");
+  })
+
+  film.addEventListener("mouseout", function() {
+    this.classList.remove("span-hover");
+    this.classList.remove("film-hover");
+  })
+
+  web.addEventListener("mouseover", function() {
+    this.classList.add("span-hover");
+    this.classList.add("web-hover");
+  })
+
+  web.addEventListener("mouseout", function() {
+    this.classList.remove("span-hover");
+    this.classList.remove("web-hover");
+  })
+
+  film.addEventListener("click",function() {
+    window.open("film-project-docs/film.html","_self")
+  })
+
+  web.addEventListener("click",function() {
+    window.open("web-project-docs/web.html","_self")
+  })
+
+  document.getElementById("secret").addEventListener("click",function() {
+    oogachaka = window.open("web-project-docs/hookedonafeeling/index.html", '1366002941508','width=1280,height=720,left=375,top=330');
+    setTimeout(function () { oogachaka.close();}, 47000);
+  })
+
+</script>
+
+</body>
+</html>

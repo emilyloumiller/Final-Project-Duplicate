@@ -1,0 +1,373 @@
+body {
+  position:relative;
+  width:100vw;
+  height:100vh;
+  padding:0;margin:0;
+  overflow:hidden;
+}
+
+#oogachaca {
+  position:absolute;
+  z-index:1;
+  top:0;left:0;
+  height:100%;
+  width:auto;
+  display:grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.ooga {
+  height:100%;
+  width:auto;
+  animation-name:ooganimate;
+  animation-duration:33s;
+  animation-timing-function: linear;
+  margin-left:100vw;
+}
+
+#ooga-row-1 {animation-delay:6.9s;}
+#ooga-row-2 {animation-delay:4.6s;}
+#ooga-row-3 {animation-delay:2.3s;}
+#ooga-row-4 {animation-delay:0s;}
+#ooga-row-5 {animation-delay:2.3s;}
+#ooga-row-6 {animation-delay:4.6s;}
+#ooga-row-7 {animation-delay:6.9s;}
+
+@keyframes ooganimate {
+  from{margin-left:100vw;}
+  to{margin-left:-85%;}
+}
+
+#verse1-a {
+  position:absolute;
+  top:100vh;left:0;
+  height:auto;
+  width:99vw;
+  display:grid;
+  grid-template-rows: auto auto auto;
+  grid-row-gap:100vh;
+  animation-name:verse1-a;
+  animation-duration:19s;
+  animation-delay: 8.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes verse1-a {
+  from{top:100vh;}
+  to{top:-400vh;}
+}
+
+#whatyoudotome {
+  position:absolute;
+  top:100vh;left:0;
+  height:auto;
+  width:99vw;
+  display:grid;
+  animation-name:verse1-b;
+  animation-timing-function: linear;
+  animation-delay:19s;
+  animation-duration:9.07s;
+}
+
+@keyframes verse1-b {
+  from{top:100vh;}
+  to{top:-100vh;}
+}
+
+#verse2 {
+  z-index:4;
+  position:absolute;
+  top:100vh;left:0;
+  height:auto;
+  width:99vw;
+  display:grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap:50vh;
+  animation-name:verse2;
+  animation-duration:17s;
+  animation-delay: 25s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes verse2 {
+  from{top:100vh;}
+  to{top:-500vh;}
+}
+
+#i {
+  position:absolute;
+  top:0;left:100vw;
+  height:100vh;
+  width:auto;
+  z-index:2;
+  animation-name:i;
+  animation-duration:3s;
+  animation-delay:32.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  background-color:white;
+}
+
+#hasselanimate {
+  position:absolute;
+  top:0;left:100vw;
+  height:100vh;
+  width:100vw;
+  z-index:3;
+  animation-name:i;
+  animation-delay:31s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  background-size:100%;
+}
+
+#hasselgif {
+  position:absolute;
+  top:0;left:100vw;
+  height:100vh;
+  width:auto;
+  z-index:3;
+  animation-name:i;
+  animation-duration:3s;
+  animation-delay:32.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes i {
+  from{left:100vw;}
+  to{left:0vw;}
+}
+
+#chorus {
+  position:absolute;
+  z-index:4;
+  top:0;left:0;
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+#hookedonafeeling {
+  position:absolute;
+  height:100vh;
+  width:100vw;
+  top:0;left:0;
+  display:grid;
+  grid-template-columns: [hooked] 4fr [on] 1.5fr [a] 1fr [lastcolumn];
+  grid-template-rows: [first] 1fr [second] 2fr [lastrow];
+}
+
+#hooked {
+  grid-column-start: hooked;
+  grid-column-end: on;
+  grid-row-start: first;
+  grid-row-end:second;
+  visibility:hidden;
+  animation-name:hookedonafeeling;
+  animation-delay:36.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  align-self:end;
+}
+
+#on {
+  grid-column-start: on;
+  grid-column-end: a;
+  grid-row-start: first;
+  grid-row-end:second;
+  visibility:hidden;
+  animation-name:hookedonafeeling;
+  animation-delay:37s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  align-self:end;
+}
+
+#a {
+  grid-column-start: a;
+  grid-column-end:lastcolumn;
+  grid-row-start: first;
+  grid-row-end:first;
+  visibility:hidden;
+  animation-name:hookedonafeeling;
+  animation-delay:37.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  align-self:end;
+}
+
+#feeling {
+  grid-column-start: hooked;
+  grid-column-end: lastcolumn;
+  grid-row-start: second;
+  grid-row-end:lastrow;
+  visibility:hidden;
+  animation-name:hookedonafeeling;
+  animation-delay:37.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes hookedonafeeling {
+  from{visibility:hidden;}
+  to{visibility:visible;}
+}
+
+#imhighonbelieving {
+  position:absolute;
+  height:100vh;
+  width:100vw;
+  top:0;left:0;
+  display:grid;
+  grid-template-columns: [im] 1fr [high] 2fr [on] .7fr [columnend];
+  grid-template-rows: [first] 1fr [second] 2fr [lastrow];
+}
+
+#im {
+  grid-column-start: im;
+  grid-column-end: high;
+  grid-row-start: first;
+  grid-row-end:second;
+  animation-name:imhighonbelieving;
+  animation-delay:40s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+  align-self:end;
+}
+
+#high {
+  grid-column-start: high;
+  grid-column-end: on;
+  grid-row-start: first;
+  grid-row-end:second;
+  animation-name:imhighonbelieving;
+  animation-delay:40.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+  align-self:end;
+}
+
+#on2 {
+  grid-column-start: on;
+  grid-column-end: columnend;
+  grid-row-start: first;
+  grid-row-end:second;
+  animation-name:imhighonbelieving;
+  animation-delay:40.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+  align-self:end;
+}
+
+#believing {
+  grid-column-start: im;
+  grid-column-end: columnend;
+  grid-row-start: second;
+  grid-row-end:lastrow;
+  animation-name:imhighonbelieving;
+  animation-delay:41s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+@keyframes imhighonbelieving {
+  from{visibility:hidden;}
+  to{visibility:visible;}
+}
+
+#thatyoureinlovewithme {
+  position:absolute;
+  height:100vh;
+  width:100vw;
+  top:0;left:0;
+  display:grid;
+  grid-template-columns: [that] 4fr [youre] 6fr [in] 3fr [columnend];
+  grid-template-rows: [first] 1fr [second] 1fr [lastrow];
+}
+
+#that {
+  grid-column-start: that;
+  grid-column-end: youre;
+  grid-row-start: first;
+  grid-row-end:second;
+  align-self:end;
+  animation-name:thatyoureinlovewithme;
+  animation-delay:44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+#youre {
+  grid-column-start: youre;
+  grid-column-end: in;
+  grid-row-start: first;
+  grid-row-end:second;
+  align-self:end;
+  animation-name:thatyoureinlovewithme;
+  animation-delay:44.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+#in {
+  grid-column-start: in;
+  grid-column-end: columnend;
+  grid-row-start: first;
+  grid-row-end:second;
+  align-self:end;
+  animation-name:thatyoureinlovewithme;
+  animation-delay:44.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+#love {
+  grid-column-start: that;
+  grid-column-end: youre;
+  grid-row-start: second;
+  grid-row-end:lastrow;
+  animation-name:thatyoureinlovewithme;
+  animation-delay:44.9s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+#with {
+  grid-column-start: youre;
+  grid-column-end: in;
+  grid-row-start: second;
+  grid-row-end:lastrow;
+  animation-name:thatyoureinlovewithme;
+  animation-delay:45.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+#me {
+  grid-column-start: in;
+  grid-column-end: columnend;
+  grid-row-start: second;
+  grid-row-end: lastrow;
+  animation-name:thatyoureinlovewithme;
+  animation-delay:45.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  visibility:hidden;
+}
+
+@keyframes thatyoureinlovewithme {
+  from{visibility:hidden;}
+  to{visibility:visible;}
+}

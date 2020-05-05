@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Cigarette Box</title>
+    <style>
+
+      body {
+        margin: 0;
+        padding:0;
+        background-color:#202224;
+        overflow:hidden;
+      }
+
+
+      /* S I Z E */
+
+      #container {
+        width: 30vw;
+        height: 50vh;
+        margin-left:40vw;
+        margin-top:25vh;
+        perspective: 1000px;
+      }
+
+      .box {
+        width: 100%;
+        height:100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transform:rotateX(-35deg);
+      }
+
+      #back {
+        position: absolute;
+        width: 300px;
+        height: 500px;
+        opacity: 1;
+        transform: rotateY(180deg) translateZ(50px) translateY(100px);
+        background-color:#00AA8A;
+        z-index:1;
+        position: absolute;
+      }
+
+      #front {
+        position: absolute;
+        width: 300px;
+        height: 340px;
+        opacity: 1;
+        transform: rotateY(0deg) translateZ(50px) translateY(260px);
+        background-color:#00AA8A;
+        z-index:6;
+        position: absolute;
+        background-image:url(front.jpg);
+        background-position:center bottom;
+        background-size:100%;
+        background-repeat:no-repeat;
+      }
+
+      #front2 {
+        position: absolute;
+        margin-top:100px;
+        width: 300px;
+        height: 160px;
+        opacity: 1;
+        background-color:#00997d;
+        z-index:4;
+        position: absolute;
+      }
+
+      #left {
+        position: absolute;
+        width: 100px;
+        height: 500px;
+        opacity: 1;
+        transform: rotateY(-90deg) translateZ(50px) translateY(100px);
+        background-color:#00997d;
+        z-index:2;
+        position: absolute;
+      }
+
+      #right {
+        position: absolute;
+        width: 100px;
+        height: 500px;
+        opacity: 1;
+        transform: rotateY(90deg) translateZ(250px) translateY(100px);
+        background-color:#00997d;
+        z-index:3;
+        position: absolute;
+      }
+
+      #top {
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        opacity: 1;
+        margin-top:0;
+        transform:translateZ(-90px);
+        background-color:#008c73;
+        z-index:0;
+        position: absolute;
+      }
+
+      #bottom {
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        opacity: 0.8;
+        transform: rotateX(-90deg) translateZ(550px);
+        background-color:#00AA8A;
+        z-index:4;
+        position: absolute;
+      }
+
+
+
+      /* A N I M A T I O N */
+
+      @keyframes flipfront2 {
+        from{transform:translateZ(50px) translateY(0px) rotateX(0deg);}
+        to{transform:translateZ(-50px) translateY(-100px) rotateX(110deg);}
+      }
+
+      #front2 {
+        animation-name:flipfront2;
+        animation-duration:.69s;
+        transform-origin:top;
+        animation-timing-function: ease-out;
+        animation-fill-mode:forwards;
+      }
+
+      @keyframes fliptop {
+        from{transform:translateZ(-50px) translateY(0px) rotateX(-90deg);}
+        to{transform:translateZ(-50px) translateY(0px) rotateX(0deg);}
+      }
+
+      #top {
+        animation-name:fliptop;
+        animation-duration:.67s;
+        transform-origin:bottom;
+        animation-fill-mode:forwards;
+        animation-timing-function: linear;
+      }
+
+
+
+      /* C I G G Y */
+
+        #ciggy_1, #ciggy_2, #ciggy_3, #ciggy_4, #ciggy_5, #ciggy_6, #ciggy_7  {
+      	position: absolute;
+      	width: 40px;
+      	height: 450px;
+      	border-radius: 55px/25px;
+      	background-color: white;
+        z-index:5;
+        }
+
+            #ciggy_1 {
+            margin-left:6px;
+            transform:translateZ(20px) translateY(148px);
+            }
+
+            #ciggy_2 {
+            margin-left:48px;
+            transform:translateZ(45px) translateY(149px);
+            }
+
+            #ciggy_3 {
+            margin-left:90px;
+            transform:translateZ(30px) translateY(149px);
+            }
+
+            #ciggy_4 {
+            margin-left:132px;
+            transform:translateZ(10px) translateY(149px);
+            }
+
+            #ciggy_5 {
+            margin-left:174px;
+            transform:translateZ(20px) translateY(149px);
+            }
+
+            #ciggy_6 {
+            margin-left:216px;
+            transform:translateZ(15px) translateY(149px);
+            }
+
+            #ciggy_7 {
+            margin-left:258px;
+            transform:translateZ(45px) translateY(149px);
+            }
+
+        #ciggy_1:hover, #ciggy_2:hover, #ciggy_3:hover, #ciggy_4:hover, #ciggy_5:hover, #ciggy_6:hover, #ciggy_7:hover {
+        transform: translateY(12px);
+        transition-duration:.5s;
+        }
+
+
+        .filter {
+      	position: absolute;
+      	left: 0;
+      	top: 0;
+      	width: 40px;
+      	height: 0;
+      	padding-top: 80px;
+      	border-radius: 55px/25px;
+        background-image:url(filter.jpg);
+        background-position:Center center;
+        background-size:cover;
+        z-index:5;
+        }
+
+        .white {
+      	position: absolute;
+      	left: 0;
+      	top: 0;
+      	width: 40px;
+      	height: 0;
+      	padding-top: 10px;
+      	border-radius: 50px/15px;
+        background-color:white;
+        z-index:7;
+        }
+
+        #ciggy_5 .filter {
+      	display:none !important;
+        }
+
+        .end {
+      	position: absolute;
+      	left: 0;
+      	top: 0;
+      	width: 40px;
+      	height: 0;
+        opacity:.9;
+      	padding-top: 18px;
+      	border-radius: 65px/30px;
+      	background-color: black;
+        background-image:url(ash.jpg);
+        background-position:center center;
+        background-size:cover;
+        z-index:5;
+        }
+
+
+
+
+/* M E D I A Q  U E R I E S */
+
+        @media only screen and (max-width: 600px) {
+
+          body {
+            margin: 0;
+            padding:0;
+            background-color:#202224;
+            overflow:hidden;
+          }
+
+
+          /* S I Z E */
+
+          #container {
+            width: 50vw;
+            height: 60vh;
+            margin-left:15vw;
+            margin-bottom:1vh;
+            perspective: 1000px;
+          }
+
+          .box {
+            width: 100%;
+            height:100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform:rotateX(-35deg);
+          }
+
+            #ciggy_1:active, #ciggy_1:focus, #ciggy_2:active, #ciggy_2:focus, #ciggy_3:active, #ciggy_3:focus, #ciggy_4:active, #ciggy_4:focus, #ciggy_5:active, #ciggy_5:focus, #ciggy_6:active, #ciggy_6:focus, #ciggy_7:active, #ciggy_7:focus {
+            transform: translateY(12px);
+            transition-duration:.5s;
+            }
+
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="box">
+        <div id="front"></div>
+        <div id="front2"></div>
+              <div id="ciggy_1">
+                <div class="filter"></div>
+                <div class="white"></div>
+              </div>
+              <div id="ciggy_2">
+                <div class="filter"></div>
+                <div class="white"></div>
+              </div>
+              <div id="ciggy_3">
+                <div class="filter"></div>
+                <div class="white"></div>
+              </div>
+              <div id="ciggy_4">
+                <div class="filter"></div>
+                <div class="white"></div>
+              </div>
+              <div id="ciggy_5">
+                <div class="filter"></div>
+                <div class="end"></div>
+              </div>
+              <div id="ciggy_6">
+                <div class="filter"></div>
+                <div class="white"></div>
+              </div>
+              <div id="ciggy_7">
+                <div class="filter"></div>
+                <div class="white"></div>
+              </div>
+        <div id="back"></div>
+        <div id="right"></div>
+        <div id="left"></div>
+        <div id="top"></div>
+        <div id="bottom"></div>
+
+      </div>
+    </div>
+  </body>
+</html>
